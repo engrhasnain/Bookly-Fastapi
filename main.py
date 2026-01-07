@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(title="Books App A FastAPI Beyond CRUD")
 
 
 # A simple get function simple welcome
@@ -65,3 +65,15 @@ async def greet(
 
 
 # I learn about the black as well, and install it, and use it as black main.py and it reformat everything
+
+
+# learn here about the pydatic model creating and how to import and use it
+from models.books import BookCreate
+
+# the post method is used here and it get data based on the pydantic model and we can display it then
+@app.post('/create_book')
+async def create_book(book_date : BookCreate):
+    return {
+        "Title" : f"{book_date.title}",
+        "Author" : f"{book_date.author}"
+    }
