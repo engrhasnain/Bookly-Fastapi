@@ -96,3 +96,7 @@ async def get_header(
     request_header["Host"] = host
 
     return request_header
+
+
+from routes import api_router
+app.include_router(api_router)

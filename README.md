@@ -26,3 +26,11 @@
     | 3xx   | Redirection   |
     | 4xx   | Client error  |
     | 5xx   | Server error  |
+
+5. CRUD: stands for Create, Read, Update and Delete, what to CRUD, the Resource, 
+   What are the Resources, the Resource is being define as the data the an API provides or allow us to manipulate.this is accessable through an endpoint
+   Basics endpoints here are
+   1. Get /books
+   2. Post /books
+   3. Patch /books{book_id} for Updating
+   3. Delete /books{book_id}
