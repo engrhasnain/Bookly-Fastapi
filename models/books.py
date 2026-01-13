@@ -17,3 +17,8 @@ class BookCreated(BaseModel):
 class BookResponse(BaseModel):
     id: int
     title : str
+    author : str
+    price: int
+    pages : int
+    published_year : int
+    in_stock : bool
