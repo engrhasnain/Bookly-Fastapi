@@ -3,6 +3,19 @@ from fastapi import FastAPI
 app = FastAPI(title="Books App A FastAPI Beyond CRUD")
 
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",  # Next.js dev
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 # A simple get function simple welcome
 @app.get("/")
 async def health():

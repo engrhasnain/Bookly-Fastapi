@@ -24,7 +24,7 @@ books_date = [
         "price": 54,
         "pages": 395,
         "published_year": 1994,
-        "in_stock": False
+        "in_stock": True
     },
     {
         "id": 4,
